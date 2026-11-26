@@ -1,0 +1,4045 @@
+
+/* ==============================
+   THE MEMORY DEPARTMENT
+   BRAND COLORS
+============================== */
+
+:root {
+  --rose: #E1B7D3;
+  --wax: #FAF8F5;
+  --blue: #A5C6D4;
+  --vision: #E2F1F8;
+  --aviary: #C5E2E7;
+  --glove: #F0EFED;
+
+  --ink: #4A4550;
+  --muted: #7B7880;
+  --dusty-pink: #B17E9E;
+  --soft-purple: #9A7890;
+}
+
+
+/* ==============================
+   GENERAL SETTINGS
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--wax);
+  color: var(--ink);
+  font-family: "Bodoni Moda", Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px 4% 30px;
+  gap: 25px;
+
+  background: var(--wax);
+}
+
+.site-name {
+  order: 1;
+
+  font-size: 27px;
+  text-align: center;
+  letter-spacing: 1px;
+  white-space: normal;
+}
+
+.site-header nav {
+  order: 2;
+
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 45px;
+  width: 100%;
+
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.site-header nav a {
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--dusty-pink);
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 25px 5%;
+    gap: 20px;
+  }
+
+  .site-name {
+    font-size: 21px;
+  }
+
+  .site-header nav {
+    gap: 14px 22px;
+    font-size: 12px;
+  }
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  min-height: calc(100vh - 115px);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 7% 130px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(225,183,211,0.55),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 15% 80%,
+      rgba(165,198,212,0.5),
+      transparent 60%
+    ),
+    var(--wax);
+}
+
+.hero-content {
+  max-width: 1000px;
+  animation: fadeIn 1.8s ease both;
+}
+
+
+/* ==============================
+   MAIN LOGO
+============================== */
+
+.hero-logo {
+  display: block;
+  width: min(600px, 80vw);
+  height: auto;
+  margin: 0 auto 40px;
+}
+
+
+/* ==============================
+   HERO TYPOGRAPHY
+============================== */
+
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 75px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.hero h1 em {
+  color: var(--dusty-pink);
+}
+
+.hero-description {
+  max-width: 520px;
+  margin: 0 auto 35px;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero-button {
+  display: inline-block;
+  border: 1px solid var(--dusty-pink);
+  padding: 17px 32px;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+}
+
+.hero-button:hover {
+  background: var(--rose);
+  color: white;
+}
+
+
+/* ==============================
+   SCROLL ARROW
+============================== */
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+
+  width: 28px;
+  height: 28px;
+
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.scroll-arrow:hover {
+  border-color: var(--dusty-pink);
+}
+
+
+/* ==============================
+   CINEMATIC INTRODUCTION
+============================== */
+
+.introduction {
+  background: var(--wax);
+  padding: 75px 7% 90px;
+  border-top: 1px solid rgba(154,120,144,0.25);
+}
+
+.intro-label {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 20px;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+
+/* ==============================
+   ARCHITECTURAL IMAGES
+============================== */
+
+.cinematic-image {
+  width: min(100%, 650px);
+  height: 300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+  background: var(--blue);
+  border: 8px solid var(--glove);
+}
+
+.cinematic-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.secondary-image {
+  width: min(100%, 650px);
+  height: 300px;
+  margin: 0 auto;
+}
+
+
+/* ==============================
+   INTRODUCTION TEXT
+============================== */
+
+.intro-statement {
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  color: var(--soft-purple);
+}
+
+.intro-statement::before {
+  content: "✳";
+  display: block;
+  color: var(--dusty-pink);
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.intro-statement h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.intro-statement h2 em {
+  color: var(--dusty-pink);
+}
+
+.intro-statement p:not(.eyebrow) {
+  max-width: 620px;
+  margin: auto;
+
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.clinical-disclaimer {
+  margin-top: 18px;
+  text-align: center;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+
+/* ==============================
+   SERVICES
+============================== */
+
+.work {
+  padding: 95px 7% 110px;
+  background: var(--wax);
+  border-top: 1px solid rgba(154,120,144,0.25);
+}
+
+.work > .eyebrow {
+  text-align: center;
+}
+
+.work h2 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.work h2::after {
+  content: "✳";
+  display: block;
+  font-size: 28px;
+  color: var(--dusty-pink);
+  margin-top: 18px;
+}
+
+
+/* ==============================
+   TWO-COLUMN SERVICE GALLERY
+============================== */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+  background: var(--blue);
+  border: 6px solid var(--glove);
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+}
+
+.project-link:hover .project-image img {
+  transform: scale(1.035);
+  opacity: 0.9;
+}
+
+.project h3 {
+  margin-top: 20px;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  transition: color 0.3s ease;
+}
+
+.project p {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.project-link:hover h3 {
+  color: var(--dusty-pink);
+}
+
+
+/* ==============================
+   ABOUT SECTION
+============================== */
+
+.about {
+  padding: 140px 7%;
+  text-align: center;
+
+  background: var(--vision);
+  border-top: 1px solid rgba(154,120,144,0.25);
+}
+
+.about h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 35px;
+}
+
+.about h2 em {
+  color: var(--dusty-pink);
+}
+
+.about p:not(.eyebrow) {
+  max-width: 650px;
+  margin: auto;
+
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+.about .about-closing {
+  margin-top: 35px;
+  font-style: italic;
+  color: var(--soft-purple);
+}
+
+
+/* ==============================
+   PATIENT PORTAL
+============================== */
+
+.patient {
+  padding: 140px 7%;
+  text-align: center;
+  background: var(--rose);
+}
+
+.patient h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.patient p:not(.eyebrow) {
+  font-size: 21px;
+  margin-bottom: 35px;
+}
+
+.patient-button {
+  display: inline-block;
+  padding: 18px 35px;
+  border: 1px solid var(--ink);
+
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.secret-message {
+  display: block;
+  opacity: 0;
+  margin-top: 65px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  transition: opacity 2s;
+}
+
+.patient:hover .secret-message,
+.patient:focus-within .secret-message {
+  opacity: 0.85;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  padding: 55px 7%;
+  text-align: center;
+
+  background: var(--wax);
+  font-size: 13px;
+}
+
+.footer-warning {
+  margin-top: 18px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--soft-purple);
+}
+
+
+/* ==============================
+   ANIMATIONS
+============================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 1450px) {
+
+  .site-header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 35px 4%;
+  }
+
+  .site-header nav {
+    position: static;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .site-name {
+    order: 1;
+  }
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    padding: 30px 20px;
+  }
+
+  .site-header nav {
+    gap: 15px;
+    font-size: 11px;
+  }
+
+  .site-name {
+    font-size: 22px;
+    white-space: normal;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 70px 6% 110px;
+  }
+
+  .hero-logo {
+    width: 90%;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .introduction {
+    padding: 50px 6%;
+  }
+
+  .cinematic-image {
+    height: 250px;
+    border-width: 5px;
+  }
+
+  .secondary-image {
+    height: 220px;
+  }
+
+  .intro-statement {
+    padding: 65px 10px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 50px;
+  }
+
+  .work {
+    padding: 80px 6%;
+  }
+
+  .about,
+  .patient {
+    padding: 90px 6%;
+  }
+
+  .about p:not(.eyebrow) {
+    font-size: 18px;
+  }
+
+}
+
+
+/* ==============================
+   REDUCED MOTION
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==============================
+   ABOUT US PAGE
+============================== */
+
+/* PAGE INTRODUCTION */
+
+.about-hero {
+ min-height: calc(100vh - 115px);
+  padding: 90px 7% 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 75% 25%,
+      rgba(225,183,211,0.4),
+      transparent 55%
+    ),
+    var(--wax);
+}
+
+.about-hero h1 {
+  font-size: clamp(48px, 6vw, 85px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.about-hero h1 em {
+  color: var(--dusty-pink);
+}
+
+.about-hero-description {
+  max-width: 570px;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.about-ornament {
+  margin-top: 55px;
+  font-size: 32px;
+  color: var(--dusty-pink);
+}
+
+
+/* OUR PHILOSOPHY */
+
+.about-philosophy {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+
+  padding: 110px 5%;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 8px solid var(--glove);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.about-text h2 em {
+  color: var(--dusty-pink);
+}
+
+.about-text p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+
+/* OUR MISSION */
+
+.about-mission {
+  padding: 115px 7%;
+  background: var(--vision);
+  text-align: center;
+}
+
+.about-mission h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.about-mission h2 em {
+  color: var(--dusty-pink);
+}
+
+.about-mission p:not(.eyebrow) {
+  max-width: 670px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.about-mission .mission-statement {
+  margin-top: 45px !important;
+  font-size: 23px !important;
+  font-style: italic;
+  color: var(--dusty-pink);
+}
+
+
+/* OUR PROMISE */
+
+.about-promise {
+  padding: 115px 7%;
+  text-align: center;
+  background: var(--wax);
+}
+
+.about-promise h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 70px;
+}
+
+.about-promise h2 em {
+  color: var(--dusty-pink);
+}
+
+.promise-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.promise-item {
+  border-top: 1px solid var(--rose);
+  padding-top: 30px;
+  text-align: left;
+}
+
+.promise-number {
+  font-size: 40px;
+  font-style: italic;
+  color: var(--dusty-pink);
+}
+
+.promise-item h3 {
+  font-size: 19px;
+  font-weight: 400;
+  margin: 25px 0 15px;
+  letter-spacing: 1px;
+}
+
+.promise-item p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* SECOND ARCHITECTURAL IMAGE */
+
+.about-photo-section {
+  padding: 40px 7% 100px;
+  text-align: center;
+}
+
+.about-photo {
+  width: min(100%, 650px);
+  height: 300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+  border: 8px solid var(--glove);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-caption {
+  margin-top: 18px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+
+/* FINAL INVITATION */
+
+.about-invitation {
+  padding: 125px 7%;
+  background: var(--rose);
+  text-align: center;
+}
+
+.about-invitation h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.about-invitation h2 em {
+  color: #8E6483;
+}
+
+.about-invitation p:not(.eyebrow) {
+  font-size: 19px;
+  margin-bottom: 35px;
+}
+
+.about-secret {
+  display: block;
+  opacity: 0;
+  margin-top: 70px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  transition: opacity 2s ease;
+}
+
+.about-invitation:hover .about-secret,
+.about-invitation:focus-within .about-secret {
+  opacity: 0.8;
+}
+
+
+/* RESPONSIVE ABOUT PAGE */
+
+@media (max-width: 800px) {
+
+  .about-philosophy {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 70px 7%;
+  }
+
+  .about-image {
+    max-width: 450px;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+  }
+
+  .promise-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-hero,
+  .about-mission,
+  .about-promise,
+  .about-invitation {
+    padding: 85px 7%;
+  }
+
+  .about-photo {
+    height: 240px;
+  }
+}
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--dusty-pink);
+}
+
+/* ==============================
+   DREAMY PAGE ENTRANCE ANIMATION
+   ALL FOUR PAGES
+============================== */
+
+/* Every page gently fades in and rises */
+
+main {
+  animation: pageReveal 1.5s ease-out both;
+}
+
+/* Main entrance animation */
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header fades in separately */
+
+.site-header {
+  animation: headerReveal 1.2s ease-out both;
+}
+
+@keyframes headerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  main,
+  .site-header {
+    animation: none;
+  }
+}
+
+/* ==============================
+   INTERACTIVE PATIENT PORTAL
+============================== */
+
+.patient-page {
+  background: var(--wax);
+}
+
+.enrollment-hero {
+  min-height: 55vh;
+  padding: 95px 7% 75px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(225,183,211,0.45),
+      transparent 55%
+    ),
+    var(--wax);
+}
+
+.enrollment-hero h1 {
+  font-size: clamp(45px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+
+.enrollment-hero h1 em {
+  color: var(--dusty-pink);
+}
+
+.enrollment-hero > p:not(.eyebrow) {
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.enrollment-star {
+  margin-top: 45px;
+  font-size: 30px;
+  color: var(--dusty-pink);
+}
+
+
+/* SERVICE SELECTION */
+
+.enrollment-section {
+  padding: 50px 7% 110px;
+  text-align: center;
+}
+
+.enrollment-section h2 {
+  font-size: clamp(35px, 4vw, 55px);
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.treatment-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.treatment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  width: 100%;
+  padding: 22px;
+
+  border: 1px solid var(--rose);
+  background: var(--wax);
+  color: var(--ink);
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-7px);
+  background: #F8F1F5;
+  border-color: var(--dusty-pink);
+}
+
+.treatment-card:focus-visible,
+.form-back:focus-visible,
+.application-submit:focus-visible {
+  outline: 2px solid var(--dusty-pink);
+  outline-offset: 4px;
+}
+
+.treatment-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+  margin-bottom: 18px;
+}
+
+.treatment-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.treatment-title {
+  font-size: clamp(24px, 3vw, 35px);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.treatment-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.treatment-action {
+  margin-top: 35px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--dusty-pink);
+}
+
+.enrollment-note {
+  margin-top: 45px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+
+/* APPLICATION FORMS */
+
+.application-section {
+  padding: 55px 7% 110px;
+  background: var(--glove);
+}
+
+.form-back {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto 25px;
+
+  border: 0;
+  background: none;
+  color: var(--soft-purple);
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.application-paper {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 65px 70px;
+
+  background: var(--wax);
+  border: 1px solid var(--rose);
+  box-shadow: 0 12px 40px rgba(74,69,80,0.04);
+}
+
+.application-heading {
+  text-align: center;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--rose);
+  margin-bottom: 45px;
+}
+
+.application-heading h2 {
+  font-size: clamp(34px, 4vw, 55px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.application-heading > p:last-child {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--soft-purple);
+}
+
+
+/* FORM INPUTS */
+
+.form-group {
+  margin-bottom: 38px;
+  border: 0;
+  min-width: 0;
+}
+
+.form-group > label,
+.form-group > legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 16px;
+
+  border: 1px solid #D9CDD5;
+  border-radius: 0;
+  background: #FFFFFF;
+  color: var(--ink);
+
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: 1px solid var(--dusty-pink);
+  border-color: var(--dusty-pink);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #A6A0A6;
+}
+
+.radio-option,
+.checkbox-option {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-bottom: 14px !important;
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+  line-height: 1.6 !important;
+
+  cursor: pointer;
+}
+
+.radio-option input,
+.checkbox-option input {
+  margin-top: 5px;
+  flex-shrink: 0;
+  accent-color: var(--dusty-pink);
+}
+
+.form-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--dusty-pink);
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--soft-purple);
+}
+
+.form-whisper {
+  min-height: 18px;
+  margin-top: 15px;
+  color: #A36F90;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* CONSENT */
+
+.consent-area {
+  padding: 30px;
+  margin: 55px 0 35px;
+
+  background: var(--vision);
+  border: 1px solid var(--blue);
+}
+
+.consent-area .eyebrow {
+  margin-bottom: 20px;
+}
+
+.checkbox-option {
+  color: var(--ink);
+}
+
+
+/* SUBMIT BUTTON */
+
+.application-submit {
+  display: block;
+  width: 100%;
+  padding: 20px 25px;
+
+  background: var(--rose);
+  color: var(--ink);
+  border: 1px solid var(--dusty-pink);
+
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.application-submit:hover {
+  background: #D8A5C7;
+}
+
+
+/* CONFIRMATION */
+
+.confirmation-section {
+  padding: 100px 7%;
+  background: var(--glove);
+}
+
+.confirmation-paper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 65px;
+  text-align: center;
+
+  background: var(--wax);
+  border: 1px solid var(--rose);
+}
+
+.confirmation-symbol {
+  display: block;
+  margin: 25px 0;
+  font-size: 40px;
+  color: var(--dusty-pink);
+}
+
+.confirmation-paper h2 {
+  font-size: clamp(35px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+#confirmation-message {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.confirmation-details {
+  margin: 45px 0;
+  padding: 25px 0;
+
+  border-top: 1px solid var(--rose);
+  border-bottom: 1px solid var(--rose);
+
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 2.5;
+}
+
+.confirmation-details span {
+  overflow-wrap: anywhere;
+}
+
+.confirmation-secret {
+  min-height: 35px;
+  margin-bottom: 30px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dusty-pink);
+}
+
+
+/* FICTION DISCLAIMER */
+
+.fiction-disclaimer {
+  padding: 25px 7%;
+  text-align: center;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: var(--soft-purple);
+}
+
+
+/* IMPORTANT: HIDE INACTIVE PANELS */
+
+.patient-page [hidden] {
+  display: none !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .enrollment-hero {
+    min-height: 45vh;
+    padding: 70px 6%;
+  }
+
+  .treatment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enrollment-section {
+    padding: 40px 6% 80px;
+  }
+
+  .application-section {
+    padding: 35px 5% 70px;
+  }
+
+  .application-paper {
+    padding: 40px 22px;
+  }
+
+  .confirmation-paper {
+    padding: 55px 25px;
+  }
+
+  .range-labels {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}
+/* Patient form entrance animation */
+
+.panel-reveal {
+  animation: pageReveal 0.9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-reveal {
+    animation: none;
+  }
+}
+
+
+/* ==============================
+   PATIENT FORM NOTIFICATIONS
+============================== */
+
+.patient-notification {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  width: min(420px, calc(100% - 40px));
+  padding: 24px;
+
+  background: #FAF8F5;
+  border: 1px solid #E1B7D3;
+
+  box-shadow: 0 12px 35px rgba(74, 69, 80, 0.15);
+
+  animation: notificationAppear 0.5s ease-out both;
+}
+
+.patient-notification[hidden] {
+  display: none !important;
+}
+
+#notification-icon {
+  font-size: 26px;
+  color: #B17E9E;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #4A4550;
+}
+
+.notification-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #7B7880;
+}
+
+#notification-close {
+  border: none;
+  background: transparent;
+  color: #9A7890;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+/* INCOMPLETE FORM */
+
+.patient-notification.error {
+  border-left: 4px solid #B17E9E;
+}
+
+/* SUCCESSFUL FORM */
+
+.patient-notification.success {
+  border-left: 4px solid #A5C6D4;
+}
+
+.patient-notification.success #notification-icon {
+  color: #7B9FAF;
+}
+
+/* ANIMATION */
+
+@keyframes notificationAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .patient-notification {
+    top: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .patient-notification {
+    animation: none;
+  }
+}
+
+/* ==============================
+   APPOINTMENT CONFIRMATION PAGE
+============================== */
+
+.appointment-page {
+  background: var(--wax);
+}
+
+.appointment-hero {
+  padding: 100px 7% 90px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 70% 25%,
+    rgba(225,183,211,0.4),transparent 60%),
+    var(--wax);
+}
+
+.appointment-symbol {
+  display: block;
+  font-size: 35px;
+  color: var(--dusty-pink);
+  margin: 30px 0;
+}
+
+.appointment-hero h1 {
+  font-size: clamp(45px,6vw,85px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.appointment-hero h1 em {
+  color: var(--dusty-pink);
+}
+
+.appointment-intro {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.appointment-status {
+  display: inline-block;
+  padding: 13px 25px;
+  border: 1px solid var(--blue);
+  background: var(--vision);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.appointment-details {
+  padding: 50px 7% 110px;
+  background: var(--glove);
+}
+
+.appointment-document {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 65px;
+  background: #FFFFFF;
+  border: 1px solid var(--rose);
+  box-shadow: 0 15px 45px rgba(74,69,80,0.05);
+}
+
+.document-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 55px;
+  border-bottom: 1px solid var(--rose);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.appointment-document > .eyebrow {
+  text-align: center;
+}
+
+.appointment-document h2 {
+  text-align: center;
+  font-size: clamp(36px,4vw,55px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 55px;
+}
+
+.appointment-document h2 em {
+  color: var(--dusty-pink);
+}
+
+.appointment-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.appointment-information > div {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E8DFE5;
+}
+
+.appointment-information span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--soft-purple);
+}
+
+.appointment-information strong {
+  font-size: 18px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.appointment-smallprint {
+  margin-top: 45px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* PRE-PROCEDURE INSTRUCTIONS */
+
+.procedure-section {
+  padding: 115px 7%;
+  text-align: center;
+}
+
+.procedure-section h2 {
+  font-size: clamp(40px,5vw,70px);
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.procedure-section h2 em {
+  color: var(--dusty-pink);
+}
+
+.procedure-intro {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.procedure-list {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.procedure-item {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rose);
+}
+
+.procedure-item span {
+  font-size: 22px;
+  color: var(--dusty-pink);
+}
+
+.procedure-item p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.procedure-warning {
+  max-width: 600px;
+  margin: 65px auto 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 2;
+  color: var(--soft-purple);
+}
+
+/* ENDING */
+
+.appointment-ending {
+  padding: 120px 7%;
+  background: var(--vision);
+  text-align: center;
+}
+
+.appointment-ending h2 {
+  font-size: clamp(40px,5vw,70px);
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.appointment-ending h2 em {
+  color: var(--dusty-pink);
+}
+
+.appointment-ending > p:not(.eyebrow) {
+  font-size: 18px;
+}
+
+.appointment-secret {
+  max-width: 550px;
+  margin: 55px auto !important;
+  font-style: italic;
+  color: var(--soft-purple);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .appointment-hero,
+  .procedure-section,
+  .appointment-ending {
+    padding: 80px 6%;
+  }
+
+  .appointment-details {
+    padding: 40px 5% 75px;
+  }
+
+  .appointment-document {
+    padding: 40px 25px;
+  }
+
+  .appointment-information {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .document-top {
+    flex-direction: column;
+  }
+
+  .procedure-item {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+}
+
+/* ==============================
+   THE MEMORY DEPARTMENT
+   SERVICES PAGE
+============================== */
+
+.services-page {
+  background: var(--wax);
+}
+
+.services-page [hidden] {
+  display: none !important;
+}
+
+.services-hero {
+  min-height: 75vh;
+  padding: 115px 7% 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 70% 25%,
+      rgba(225,183,211,0.42), transparent 55%),
+    radial-gradient(ellipse at 15% 80%,
+      rgba(165,198,212,0.24), transparent 55%),
+    var(--wax);
+}
+
+.services-hero h1 {
+  font-size: clamp(48px, 6vw, 85px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 25px 0 30px;
+}
+
+.services-hero h1 em,
+.services-directory h2 em,
+.service-detail h2 em,
+.service-detail h3 em,
+.services-interlude h2 em,
+.services-faq h2 em,
+.services-ending h2 em {
+  color: var(--dusty-pink);
+}
+
+.services-hero-description {
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.services-hero-star {
+  margin: 55px 0 30px;
+  font-size: 32px;
+  color: var(--dusty-pink);
+}
+
+.services-hero-footnote {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+/* TREATMENT DIRECTORY */
+
+.services-directory {
+  padding: 110px 7%;
+  text-align: center;
+}
+
+.services-directory h2 {
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 400;
+  margin: 20px 0 55px;
+}
+
+.services-directory-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.directory-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid var(--rose);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.directory-card:hover {
+  transform: translateY(-8px);
+  background: #F8F1F5;
+}
+
+.directory-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 22px;
+}
+
+.directory-number,
+.directory-action {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+.directory-title {
+  font-size: clamp(25px, 3vw, 38px);
+  margin: 18px 0 28px;
+}
+
+.directory-action {
+  color: var(--dusty-pink);
+}
+
+/* SERVICE DETAILS */
+
+.service-detail {
+  scroll-margin-top: 30px;
+}
+
+.restoration-detail {
+  background: var(--vision);
+}
+
+.deletion-detail {
+  background: #F8F0F5;
+}
+
+.service-detail-heading {
+  padding: 110px 7% 75px;
+  text-align: center;
+}
+
+.service-detail-heading h2 {
+  font-size: clamp(42px, 5.5vw, 75px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.service-detail-heading > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.service-editorial-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 6% 110px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 75px;
+  align-items: start;
+}
+
+.service-editorial-image {
+  position: sticky;
+  top: 35px;
+}
+
+.service-editorial-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 8px solid var(--glove);
+}
+
+.service-editorial-image p {
+  margin-top: 16px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+.service-editorial-copy h3 {
+  font-size: clamp(35px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 25px 0 35px;
+}
+
+.service-editorial-copy > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+.service-editorial-copy .editorial-whisper {
+  margin-top: 40px;
+  font-style: italic;
+  color: var(--soft-purple);
+}
+
+/* PROCESS */
+
+.service-process {
+  padding: 105px 7%;
+  background: rgba(255,255,255,0.48);
+  text-align: center;
+}
+
+.service-process h3 {
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 400;
+  margin: 20px 0 65px;
+}
+
+.process-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.process-step {
+  padding-top: 30px;
+  border-top: 1px solid var(--rose);
+  text-align: left;
+}
+
+.process-step > span {
+  font-size: 43px;
+  color: var(--dusty-pink);
+  font-style: italic;
+}
+
+.process-step h4 {
+  margin: 25px 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.process-step p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* BENEFITS */
+
+.service-benefits {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 105px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+}
+
+.service-benefits h3 {
+  font-size: clamp(36px, 4vw, 57px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 20px;
+}
+
+.service-benefits ul {
+  padding-left: 23px;
+}
+
+.service-benefits li {
+  font-size: 17px;
+  line-height: 1.8;
+  padding: 10px 0;
+}
+
+/* CONFIDENTIAL ADVISORIES */
+
+.service-advisory {
+  max-width: 850px;
+  margin: 0 auto 100px;
+  padding: 60px;
+  background: var(--wax);
+  border: 1px solid var(--rose);
+  text-align: center;
+}
+
+.service-advisory h3 {
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 400;
+  margin: 20px 0 25px;
+}
+
+.service-advisory > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.advisory-button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 17px 24px;
+  background: transparent;
+  border: 1px solid var(--dusty-pink);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.advisory-button:hover {
+  background: var(--rose);
+}
+
+.service-advisory .advisory-reveal {
+  margin-top: 35px;
+  padding: 25px;
+  background: var(--vision);
+  color: var(--soft-purple);
+  font-style: italic;
+}
+
+/* SERVICE CTA */
+
+.service-cta {
+  padding: 90px 7% 110px;
+  text-align: center;
+}
+
+.service-cta h3 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  margin: 20px 0 40px;
+}
+
+/* TRANSITION */
+
+.services-interlude {
+  padding: 130px 7%;
+  background: var(--ink);
+  color: var(--wax);
+  text-align: center;
+}
+
+.services-interlude > p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.services-interlude > span {
+  display: block;
+  margin: 35px 0;
+  font-size: 30px;
+  color: var(--rose);
+}
+
+.services-interlude h2 {
+  font-size: clamp(43px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.services-interlude h2 em {
+  color: var(--rose);
+}
+
+/* FAQ */
+
+.services-faq {
+  padding: 120px 7%;
+  text-align: center;
+  background: var(--wax);
+}
+
+.services-faq h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  margin: 20px 0 65px;
+}
+
+.faq-list {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-list details {
+  border-top: 1px solid var(--rose);
+  padding: 27px 0;
+}
+
+.faq-list details:last-child {
+  border-bottom: 1px solid var(--rose);
+}
+
+.faq-list summary {
+  font-size: 20px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.faq-list details p {
+  padding: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* FINAL SECTION */
+
+.services-ending {
+  padding: 130px 7%;
+  text-align: center;
+  background: var(--rose);
+}
+
+.services-ending h2 {
+  font-size: clamp(43px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.services-ending h2 em {
+  color: #8E6483;
+}
+
+.services-ending > p:not(.eyebrow) {
+  max-width: 610px;
+  margin: 0 auto 35px;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.services-ending-secret {
+  display: block;
+  opacity: 0;
+  margin-top: 70px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  transition: opacity 2s ease;
+}
+
+.services-ending:hover .services-ending-secret,
+.services-ending:focus-within .services-ending-secret {
+  opacity: 0.85;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .services-directory-grid,
+  .service-editorial-grid,
+  .process-grid,
+  .service-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .service-editorial-grid {
+    gap: 40px;
+    padding: 20px 7% 75px;
+  }
+
+  .service-editorial-image {
+    position: static;
+  }
+
+  .service-editorial-image img {
+    max-height: 480px;
+  }
+
+  .service-benefits {
+    gap: 30px;
+  }
+
+  .service-advisory {
+    margin: 0 6% 75px;
+    padding: 40px 25px;
+  }
+
+  .services-hero,
+  .services-directory,
+  .service-detail-heading,
+  .service-process,
+  .services-faq,
+  .services-ending,
+  .services-interlude {
+    padding: 80px 7%;
+  }
+
+  .process-grid {
+    gap: 45px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .directory-card,
+  .services-ending-secret {
+    transition: none;
+  }
+}
+.about-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ABOUT US HERO VIDEO */
+
+.about-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.about-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-hero > :not(.about-background-video) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================
+   SERVICES PAGE CINEMATIC HERO VIDEO
+   =================================== */
+
+.services-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100vh - 115px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep all text ABOVE the video */
+.services-hero > :not(.services-background-video) {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ===================================
+   PATIENT PAGE CINEMATIC HERO VIDEO
+   =================================== */
+
+.enrollment-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100vh - 115px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* KEEP ALL TEXT ABOVE THE VIDEO */
+
+.enrollment-hero > :not(.patient-background-video) {
+  position: relative;
+  z-index: 1;
+}
+
+/* WHO WE SERVE */
+
+.about-audience {
+  padding: 110px 8%;
+  background: var(--wax);
+  text-align: center;
+}
+
+.about-audience .eyebrow {
+  margin-bottom: 25px;
+}
+
+.about-audience h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.about-audience h2 em {
+  display: block;
+  color: #B17E9E;
+  font-weight: 400;
+}
+
+.about-audience p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.about-audience .audience-intro {
+  font-size: 1.2rem;
+}
+
+.about-audience .audience-closing {
+  margin-top: 45px !important;
+  font-family: "Bodoni Moda", serif;
+  font-size: 1.5rem !important;
+}
+
+.audience-closing em {
+  color: #B17E9E;
+}
+/* NEW WEBSITE LOGO */
+
+.site-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* FIX NEW HOMEPAGE LOGO SIZE */
+
+.hero-logo {
+  display: block;
+  width: 320px;
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto 25px;
+  object-fit: contain;
+}
+/* HOMEPAGE LOGO SIZE */
+
+.hero-logo {
+  display: block;
+  width: 1000px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 25px;
+  object-fit: contain;
+}
+
+
+/* BIG LOGO WITH EXTRA TIGHT SPACING */
+
+.hero {
+  min-height: 0;
+  height: auto;
+  padding: 0 7% 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  width: 750px;
+  max-width: 100%;
+  height: auto;
+  margin: -130px auto -190px;
+  object-fit: contain;
+}
+
+.hero-eyebrow {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  margin-top: 0;
+}
+/* MOVE ENTIRE HOMEPAGE CONTENT UP */
+
+.hero-content {
+  transform: translateY(-60px);
+}
+
+
+/* THREE-DAY RESIDENTIAL STAY */
+
+.memory-stay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding: 110px 8%;
+  background: #FAF8F5;
+}
+
+.memory-stay-image {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.memory-stay-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.memory-stay-content {
+  max-width: 550px;
+}
+
+.memory-stay-content h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(38px, 4vw, 64px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 18px 0 35px;
+}
+
+.memory-stay-content h2 em {
+  color: #B58EAA;
+  font-weight: 400;
+}
+
+.memory-stay-content > p:not(.eyebrow) {
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #4A4550;
+}
+
+.memory-stay-closing {
+  font-family: "Bodoni Moda", serif;
+  font-size: 23px !important;
+  margin-top: 35px;
+  margin-bottom: 35px !important;
+}
+
+.memory-stay-closing em {
+  color: #B58EAA;
+}
+
+.memory-stay-content .hero-button {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .memory-stay {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 70px 7%;
+  }
+
+  .memory-stay-image {
+    height: 420px;
+  }
+}
+
+/* ========================================
+   UNAUTHORIZED SYSTEM WARNING
+======================================== */
+
+.system-warning-overlay[hidden] {
+  display: none !important;
+}
+
+.system-warning-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(8, 9, 13, 0.83);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.system-warning {
+  width: min(100%, 580px);
+  background: #101217;
+  color: #e7e7e9;
+  border: 1px solid #8e303a;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.7);
+  font-family: "Courier New", monospace;
+  animation: warning-enter 0.35s steps(4, end);
+}
+
+.system-warning-header,
+.system-warning-footer {
+  padding: 15px 22px;
+  background: #191b21;
+  color: #999ca5;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.system-warning-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #383a42;
+}
+
+.system-warning-footer {
+  border-top: 1px solid #383a42;
+}
+
+.system-warning-body {
+  padding: 40px 32px;
+}
+
+.system-warning-status,
+.system-warning-red {
+  color: #ff6572;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.system-warning-body h2 {
+  font-family: "Courier New", monospace;
+  font-size: clamp(23px, 4vw, 35px);
+  line-height: 1.25;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 25px 0;
+}
+
+.system-warning-body > p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.system-warning-red {
+  margin-top: 35px;
+  animation: warning-blink 1.2s steps(2, start) infinite;
+}
+
+.system-warning-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.system-warning-actions a,
+.system-warning-actions button {
+  flex: 1;
+  padding: 16px 12px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.warning-leave {
+  background: #a43a46;
+  color: white;
+  border: 1px solid #a43a46;
+}
+
+.warning-dismiss {
+  background: transparent;
+  color: white;
+  border: 1px solid #777b84;
+}
+
+.warning-leave:hover {
+  background: #c04a57;
+}
+
+.warning-dismiss:hover {
+  background: #292c34;
+}
+
+body.system-warning-active {
+  overflow: hidden;
+}
+
+body.system-warning-flicker::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+  z-index: 99998;
+  animation: system-flash 0.3s steps(3, end) forwards;
+}
+
+@keyframes warning-enter {
+  0% {
+    opacity: 0;
+    transform: translate(5px, -4px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-3px, 2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes warning-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes system-flash {
+  0% { opacity: 0; }
+  30% { opacity: 0.65; }
+  60% { opacity: 0; }
+  80% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .system-warning-body {
+    padding: 30px 22px;
+  }
+
+  .system-warning-actions {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .system-warning,
+  .system-warning-red,
+  body.system-warning-flicker::after {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   THREE-DAY RESIDENTIAL ITINERARY
+======================================== */
+
+.stay-itinerary {
+  padding: 110px 8%;
+  background: #E2F1F8;
+  text-align: center;
+}
+
+.stay-itinerary-heading {
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.stay-itinerary-heading h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #4A4550;
+  margin: 18px 0 25px;
+}
+
+.stay-itinerary-heading h2 em {
+  color: #B58EAA;
+  font-weight: 400;
+}
+
+.stay-itinerary-heading > p:last-child {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #7B7880;
+}
+
+.stay-itinerary-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  background: #FAF8F5;
+  box-shadow: 0 20px 65px rgba(74, 69, 80, 0.07);
+}
+
+.stay-day-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #E6DEE3;
+}
+
+.stay-day-button {
+  border: 0;
+  border-right: 1px solid #E6DEE3;
+  background: transparent;
+  padding: 28px 12px;
+  color: #7B7880;
+  font-family: "Bodoni Moda", serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.stay-day-button:last-child {
+  border-right: 0;
+}
+
+.stay-day-button span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 9px;
+}
+
+.stay-day-button:hover {
+  background: #F4E8EF;
+}
+
+.stay-day-button.active {
+  background: #E1B7D3;
+  color: #4A4550;
+}
+
+.stay-day-button:focus-visible {
+  outline: 2px solid #6E91A8;
+  outline-offset: -4px;
+}
+
+.stay-day-content {
+  padding: 65px 10%;
+  text-align: left;
+  min-height: 360px;
+}
+
+.stay-day-panel[hidden] {
+  display: none !important;
+}
+
+.stay-day-panel {
+  animation: stay-reveal 0.55s ease both;
+}
+
+.stay-day-panel h3 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(29px, 3vw, 43px);
+  font-weight: 400;
+  color: #4A4550;
+  margin: 15px 0 25px;
+}
+
+.stay-day-panel > p:not(.eyebrow) {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4A4550;
+  margin-bottom: 20px;
+}
+
+.stay-day-panel .stay-day-quote {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-size: 22px !important;
+  color: #B58EAA !important;
+  margin-top: 35px;
+}
+
+.stay-itinerary-footer {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #7B7880;
+  margin-top: 45px;
+}
+
+@keyframes stay-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .stay-itinerary {
+    padding: 75px 6%;
+  }
+
+  .stay-day-button {
+    padding: 22px 5px;
+    font-size: 12px;
+  }
+
+  .stay-day-content {
+    padding: 40px 8%;
+    min-height: 400px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stay-day-panel {
+    animation: none;
+  }
+}
+
+
+/* ========================================
+   HOMEPAGE — PATIENT FAQ
+======================================== */
+
+.home-faq {
+  position: relative;
+  overflow: hidden;
+  padding: 125px 7% 105px;
+  background:
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(225, 183, 211, 0.19),
+      transparent 45%
+    ),
+    var(--wax);
+  border-top: 1px solid rgba(154, 120, 144, 0.2);
+}
+
+/* SECTION INTRODUCTION */
+
+.home-faq-heading {
+  max-width: 800px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.home-faq-heading .eyebrow {
+  margin-bottom: 25px;
+}
+
+.home-faq-symbol {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: var(--dusty-pink);
+}
+
+.home-faq-heading h2 {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.home-faq-heading h2 em {
+  color: var(--dusty-pink);
+  font-weight: 400;
+}
+
+.home-faq-intro {
+  max-width: 610px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* QUESTIONS */
+
+.home-faq-list {
+  max-width: 950px;
+  margin: 0 auto;
+  border-top: 1px solid #DCC8D4;
+}
+
+.home-faq-item {
+  border-bottom: 1px solid #DCC8D4;
+}
+
+.home-faq-item summary {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 22px;
+  padding: 29px 12px;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.home-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-item summary::marker {
+  content: "";
+}
+
+.home-faq-item summary:hover,
+.home-faq-item[open] summary {
+  color: var(--dusty-pink);
+}
+
+.home-faq-item summary:focus-visible {
+  outline: 2px solid var(--dusty-pink);
+  outline-offset: -3px;
+}
+
+.home-faq-number {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--soft-purple);
+}
+
+.home-faq-question {
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.home-faq-toggle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.home-faq-toggle::before,
+.home-faq-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--soft-purple);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-faq-toggle::before {
+  width: 17px;
+  height: 1px;
+}
+
+.home-faq-toggle::after {
+  width: 1px;
+  height: 17px;
+}
+
+.home-faq-item[open] .home-faq-toggle::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* EXPANDED ANSWERS */
+
+.home-faq-answer {
+  padding: 0 75px 34px 82px;
+  animation: homeFaqReveal 0.35s ease both;
+}
+
+.home-faq-answer p {
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--muted);
+}
+
+@keyframes homeFaqReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ENDING */
+
+.home-faq-ending {
+  margin: 75px auto 0;
+  text-align: center;
+}
+
+.home-faq-ending > p {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: var(--soft-purple);
+}
+
+.home-faq-secret {
+  display: block;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 30px auto 0;
+  padding: 8px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dusty-pink);
+  cursor: default;
+}
+
+.home-faq-secret-reveal {
+  display: none;
+}
+
+.home-faq-secret:hover .home-faq-secret-original,
+.home-faq-secret:focus .home-faq-secret-original {
+  display: none;
+}
+
+.home-faq-secret:hover .home-faq-secret-reveal,
+.home-faq-secret:focus .home-faq-secret-reveal {
+  display: inline;
+}
+
+.home-faq-secret:focus-visible {
+  outline: 1px solid var(--dusty-pink);
+  outline-offset: 3px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .home-faq {
+    padding: 85px 6% 75px;
+  }
+
+  .home-faq-heading {
+    margin-bottom: 50px;
+  }
+
+  .home-faq-intro {
+    font-size: 15px;
+  }
+
+  .home-faq-item summary {
+    grid-template-columns: 28px minmax(0, 1fr) 20px;
+    gap: 12px;
+    padding: 24px 4px;
+  }
+
+  .home-faq-question {
+    font-size: 17px;
+  }
+
+  .home-faq-answer {
+    padding: 0 15px 28px 44px;
+  }
+
+  .home-faq-answer p {
+    font-size: 15px;
+  }
+
+  .home-faq-ending {
+    margin-top: 55px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-faq-answer {
+    animation: none;
+  }
+
+  .home-faq-toggle::before,
+  .home-faq-toggle::after {
+    transition: none;
+  }
+}
+
+/* ========================================
+   MEMORY DEPARTMENT — PARTNER ADVERTISEMENTS
+======================================== */
+
+.memory-ad {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 5000;
+
+  width: min(310px, calc(100vw - 40px));
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+
+  padding: 24px 22px 20px;
+
+  background: #FAF8F5;
+  border: 1px solid #D8B9CC;
+  box-shadow: 0 15px 55px rgba(74, 69, 80, 0.18);
+
+  text-align: center;
+  animation: memoryAdEnter 0.8s ease both;
+}
+
+.memory-ad[hidden] {
+  display: none !important;
+}
+
+.memory-ad-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 2;
+
+  border: none;
+  background: transparent;
+  color: #9A7890;
+
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.memory-ad-close:hover {
+  color: #4A4550;
+}
+
+.memory-ad-label {
+  margin-bottom: 16px;
+  padding-right: 14px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #9A7890;
+}
+
+.memory-ad-image {
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  background: #E2F1F8;
+}
+
+.memory-ad-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memory-ad-category {
+  margin-top: 19px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #9A7890;
+}
+
+.memory-ad-title {
+  margin: 12px 0 6px;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #4A4550;
+}
+
+.memory-ad-subtitle {
+  font-size: 15px;
+  font-style: italic;
+  color: #B17E9E;
+}
+
+.memory-ad-description {
+  margin: 16px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4A4550;
+}
+
+.memory-ad-fineprint {
+  padding-top: 12px;
+  border-top: 1px solid #E8D9E2;
+  font-size: 10px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #9A7890;
+}
+
+.memory-ad-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.memory-ad-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #DDD0D8;
+}
+
+.memory-ad-dot.active {
+  background: #B17E9E;
+}
+
+@keyframes memoryAdEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .memory-ad {
+    bottom: 12px;
+    left: 12px;
+    width: min(280px, calc(100vw - 24px));
+    padding: 18px;
+  }
+
+  .memory-ad-image {
+    height: 125px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-ad {
+    animation: none;
+  }
+}
+
+/* ========================================
+   THE AFTERCARE COLLECTION
+======================================== */
+
+.aftercare-collection {
+  padding: 110px 7%;
+  background: #FAF8F5;
+  color: #4A4550;
+  scroll-margin-top: 100px;
+}
+
+.aftercare-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.aftercare-eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9A7890;
+}
+
+.aftercare-heading h2 {
+  margin: 20px 0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.aftercare-heading h2 em {
+  color: #B17E9E;
+  font-weight: 400;
+}
+
+.aftercare-intro {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #7B7880;
+}
+
+.aftercare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.aftercare-product {
+  min-width: 0;
+  scroll-margin-top: 110px;
+}
+
+.aftercare-product img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: 26px;
+}
+
+.aftercare-number {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  color: #9A7890;
+}
+
+.aftercare-product h3 {
+  margin: 14px 0 8px;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.aftercare-subtitle {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #B17E9E;
+}
+
+.aftercare-description {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #7B7880;
+}
+
+.aftercare-warning {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #E1B7D3;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #9A7890;
+}
+
+.aftercare-footer {
+  margin-top: 65px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9A7890;
+}
+
+@media (max-width: 850px) {
+  .aftercare-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    max-width: 480px;
+  }
+
+  .aftercare-collection {
+    padding: 75px 6%;
+  }
+}
+
+/* POPUP ADVERTISEMENT BUTTONS */
+
+.memory-ad-cta {
+  display: block;
+  margin-top: 18px;
+  padding: 12px 14px;
+  background: #E1B7D3;
+  color: #4A4550;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.memory-ad-cta:hover {
+  background: #B17E9E;
+  color: #FFFFFF;
+}
+
+/* ========================================
+   LIFE AFTER TREATMENT PAGE
+======================================== */
+
+/* HERO */
+
+.aftercare-hero {
+  min-height: 75vh;
+  padding: 120px 7% 100px;
+  background: #FAF8F5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aftercare-hero h1 {
+  margin: 25px 0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #4A4550;
+}
+
+.aftercare-hero h1 em {
+  color: #B17E9E;
+}
+
+.aftercare-hero-subtitle {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(19px, 2.5vw, 28px);
+  font-style: italic;
+  color: #9A7890;
+}
+
+.aftercare-hero-description {
+  max-width: 610px;
+  margin: 25px auto;
+  font-size: 15px;
+  line-height: 2;
+  color: #7B7880;
+}
+
+
+/* TESTIMONIAL SECTION */
+
+.aftercare-stories {
+  padding: 110px 7%;
+  background: #E2F1F8;
+}
+
+.aftercare-intro {
+  max-width: 650px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.aftercare-intro h2 {
+  margin: 20px 0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  color: #4A4550;
+}
+
+.aftercare-intro h2 em {
+  color: #B17E9E;
+}
+
+.aftercare-intro > p:last-child {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #7B7880;
+}
+
+.aftercare-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.aftercare-story {
+  background: #FAF8F5;
+  border: 1px solid #D7DCE0;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 390px;
+}
+
+.aftercare-story-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  color: #9A7890;
+}
+
+.aftercare-story-quote {
+  margin: 45px 0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.65;
+  color: #4A4550;
+}
+
+.aftercare-story-bottom {
+  border-top: 1px solid #E1B7D3;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.aftercare-story-bottom p {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 20px;
+  color: #4A4550;
+}
+
+.aftercare-story-bottom span {
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  color: #9A7890;
+}
+
+.aftercare-disclaimer {
+  margin-top: 45px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  color: #7B7880;
+}
+
+
+/* LIFE BEYOND TREATMENT */
+
+.aftercare-message {
+  padding: 110px 7%;
+  background: #FAF8F5;
+  text-align: center;
+}
+
+.aftercare-message h2 {
+  margin: 25px 0;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 400;
+  color: #4A4550;
+}
+
+.aftercare-message h2 em {
+  color: #B17E9E;
+}
+
+.aftercare-message > p:not(.eyebrow) {
+  max-width: 660px;
+  margin: 25px auto;
+  font-size: 15px;
+  line-height: 2;
+  color: #7B7880;
+}
+
+.aftercare-message .aftercare-message-closing {
+  margin-top: 35px;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 21px;
+  color: #4A4550;
+}
+
+.aftercare-message-closing em {
+  display: block;
+  color: #B17E9E;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .aftercare-stories-grid {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+
+  .aftercare-story {
+    min-height: 300px;
+  }
+
+  .aftercare-hero {
+    padding: 90px 6%;
+  }
+
+  .aftercare-stories,
+  .aftercare-message {
+    padding: 75px 6%;
+  }
+
+}
+
+/* FIVE-PAGE NAVIGATION */
+
+.site-header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2.5vw, 35px);
+}
+
+.site-header nav a {
+  white-space: nowrap;
+}
+
+/* ========================================
+   LIFE AFTER TREATMENT BACKGROUND VIDEO
+======================================== */
+
+.aftercare-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* LIFE AFTER TREATMENT BACKGROUND VIDEO */
+
+.aftercare-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aftercare-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep all text above the video */
+
+.aftercare-hero > :not(.aftercare-background-video) {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Keep text visible above the video */
+.aftercare-hero > :not(.aftercare-background-video) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   THE MEMORY DEPARTMENT — OFFICIAL FILM
+======================================== */
+
+.brand-film {
+  padding: 110px 7%;
+  background: #F3E4ED;
+  text-align: center;
+  border-top: 1px solid rgba(154,120,144,0.25);
+  border-bottom: 1px solid rgba(154,120,144,0.25);
+}
+
+.brand-film h2 {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 25px 0 30px;
+  color: var(--ink);
+}
+
+.brand-film h2 em {
+  color: var(--dusty-pink);
+}
+
+.brand-film-intro {
+  max-width: 600px;
+  margin: 0 auto 45px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+/* VIDEO PLAYER */
+
+.brand-film-frame {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 8px;
+  background: var(--wax);
+  border: 1px solid var(--rose);
+  box-shadow: 0 15px 45px rgba(74,69,80,0.08);
+}
+
+.brand-film-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* EDITORIAL CAPTION */
+
+.brand-film-caption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 950px;
+  margin: 18px auto 0;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--soft-purple);
+}
+
+.brand-film-closing {
+  margin-top: 55px;
+  font-size: 25px;
+  font-style: italic;
+  color: var(--dusty-pink);
+}
+
+.brand-film-disclaimer {
+  margin-top: 20px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--soft-purple);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .brand-film {
+    padding: 75px 6%;
+  }
+
+  .brand-film-intro {
+    font-size: 16px;
+  }
+
+  .brand-film-frame {
+    padding: 5px;
+  }
+
+  .brand-film-caption {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+/* CLICKABLE ADVERTISEMENT DOTS */
+
+#memory-ad .memory-ad-dot {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#memory-ad .memory-ad-dot:hover {
+  transform: scale(1.3);
+}
+
+#memory-ad .memory-ad-dot:focus-visible {
+  outline: 1px solid var(--dusty-pink);
+  outline-offset: 4px;
+}
+/* REMOVE HOMEPAGE ADVERTISEMENT FINE PRINT */
+
+#memory-ad .memory-ad-fineprint {
+  display: none;
+}
+/* REMOVE DREAMLESS ADVERTISEMENT FINE PRINT */
+
+#dreamless-ad .memory-ad-fineprint {
+  display: none !important;
+}
+
+/* FIX HOMEPAGE SCROLL ARROW */
+
+.hero {
+  padding-bottom: 130px;
+}
+
+.hero .scroll-arrow {
+  bottom: 30px;
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 110px;
+  }
+}
+
+/* ========================================
+   THREE PATIENT SERVICE OPTIONS
+======================================== */
+
+.patient-page .treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1200px;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.patient-page .treatment-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.patient-page .treatment-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+#consultation-form[hidden] {
+  display: none !important;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+  .patient-page .treatment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .patient-page .treatment-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+}
+/* HOMEPAGE — THREE SERVICES */
+
+#services .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+#services .project {
+  min-width: 0;
+}
+
+#services .project-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+#services .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  #services .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

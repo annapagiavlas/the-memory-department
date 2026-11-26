@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Memory Department | A Better Past</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- YOUR EXISTING CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- HOMEPAGE VIDEO STYLING -->
+  <style>
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .memory-home-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      opacity: 0.2;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero > .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero > .scroll-arrow {
+      z-index: 3;
+    }
+  </style>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="services.html">SERVICES</a>
+      <a href="patient.html">BECOME A PATIENT</a>
+      <a href="aftercare.html">LIFE AFTER TREATMENT</a>
+    </nav>
+
+
+  </header>
+
+
+  <main>
+
+    <!-- HOMEPAGE HERO -->
+    <section class="hero">
+
+      <!-- DREAMLIKE BACKGROUND VIDEO -->
+      <video
+        class="memory-home-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source
+          src="images/wesbitecover1.mp4"
+          type="video/mp4"
+        >
+      </video>
+
+      <div class="hero-content">
+
+        <!-- YOUR ACTUAL LOGO -->
+        <img
+          src="images/logo3.png"
+          alt="The Memory Department"
+          class="hero-logo"
+        >
+
+        <p class="hero-eyebrow">
+          A BETTER PAST. A BRIGHTER FUTURE.
+        </p>
+
+        <h1>
+          Some things are better
+          <em>left forgotten.</em>
+        </h1>
+
+        <p class="hero-description">
+          Memory restoration and remediation services
+          designed for a happier tomorrow.
+        </p>
+
+        <a href="services.html" class="hero-button">
+          DISCOVER OUR SERVICES
+        </a>
+
+      </div>
+
+      <a
+        class="scroll-arrow"
+        href="#introduction"
+        aria-label="Scroll to discover more"
+      ></a>
+
+    </section>
+
+
+    <!-- CINEMATIC INTRODUCTION -->
+    <section class="introduction" id="introduction">
+
+      <div class="intro-label">
+        <span>COLLECTION: 003</span>
+        <span>EST. 2026</span>
+      </div>
+
+      <div class="cinematic-image">
+
+        <img
+          src="images/memory-resort.jpg"
+          alt="Dreamlike architectural staircase"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="intro-statement">
+
+        <p class="eyebrow">
+          WELCOME TO THE MEMORY DEPARTMENT
+        </p>
+
+        <h2>
+          Your past is in
+          <em>good hands.</em>
+        </h2>
+
+        <p>
+          We believe everyone deserves a past
+          worth remembering. Through our innovative
+          memory services, we help you preserve
+          the beautiful things and leave the rest behind.
+        </p>
+
+      </div>
+
+      <div class="cinematic-image secondary-image">
+
+        <img
+          src="images/memory-resor.jpg"
+          alt="Dreamlike pastel architectural pool"
+          loading="lazy"
+        >
+
+      </div>
+
+      <p class="clinical-disclaimer">
+        CERTAIN MEMORIES MAY BE PERMANENTLY
+        INACCESSIBLE FOLLOWING TREATMENT.
+      </p>
+
+    </section>
+
+
+<!-- THE MEMORY DEPARTMENT OFFICIAL FILM -->
+<section class="brand-film" id="official-film">
+
+  <p class="eyebrow">
+    THE MEMORY DEPARTMENT / OFFICIAL FILM
+  </p>
+
+  <h2>
+    Imagine a life
+    <em>beyond yesterday.</em>
+  </h2>
+
+  <p class="brand-film-intro">
+    
+    Discover a new possibility with The Memory Department.
+  </p>
+
+  <div class="brand-film-frame">
+
+    <video
+      class="brand-film-video"
+      controls
+      playsinline
+      preload="metadata"
+      aria-label="The Memory Department official film"
+    >
+      <source
+        src="images/advertisementTHMD.mp4"
+        type="video/mp4"
+      >
+    </video>
+
+  </div>
+
+  <div class="brand-film-caption">
+    <span>FILM NO. 001 — A BRIGHTER FUTURE</span>
+    <span>© 2026 THE MEMORY DEPARTMENT</span>
+  </div>
+
+  <p class="brand-film-closing">
+    Your future is worth remembering.
+  </p>
+
+  <p class="brand-film-disclaimer">
+    INDIVIDUAL RECOLLECTIONS MAY VARY.
+  </p>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="work" id="services">
+
+  <p class="eyebrow">
+    PERSONALIZED MEMORY CARE
+  </p>
+
+  <h2>OUR SERVICES</h2>
+
+  <div class="project-grid">
+
+    <!-- MEMORY RESTORATION -->
+
+    <article class="project">
+
+      <a href="patient.html" class="project-link">
+
+        <div class="project-image">
+
+          <img
+            src="images/memory-restoration.jpg"
+            alt="Memory restoration visual"
+            loading="lazy"
+          >
+
+        </div>
+
+        <h3>MEMORY RESTORATION</h3>
+
+        <p>
+          Rediscover what time has taken away.
+        </p>
+
+      </a>
+
+    </article>
+
+
+    <!-- MEMORY REMEDIATION -->
+
+    <article class="project">
+
+      <a href="patient.html" class="project-link">
+
+        <div class="project-image">
+
+          <img
+            src="images/memory-deletion.jpg"
+            alt="Memory remediation visual"
+            loading="lazy"
+          >
+
+        </div>
+
+        <h3>MEMORY REMEDIATION</h3>
+
+        <p>
+          Because not everything needs to stay.
+        </p>
+
+      </a>
+
+    </article>
+
+
+    <!-- PRIVATE CONSULTATION -->
+
+    <article class="project">
+
+     <a href="patient.html" class="project-link">
+
+        <div class="project-image">
+
+          <img
+            src="images/memory-consultation3.jpg"
+            alt="Private consultation"
+            loading="lazy"
+          >
+
+        </div>
+
+        <h3>PRIVATE CONSULTATION</h3>
+
+        <p>
+          A private conversation about your
+          circumstances and treatment options.
+        </p>
+
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+      <p class="eyebrow">
+        A NEW APPROACH TO REMEMBERING
+      </p>
+
+      <h2>
+        Happiness is a choice.
+        <br>
+        <em>So is remembering.</em>
+      </h2>
+
+      <p>
+        Every memory shapes who we become.
+        But what if you could choose which ones
+        remained? At The Memory Department,
+        we believe your future shouldn't be
+        defined by a past you cannot change.
+      </p>
+
+      <p class="about-closing">
+        Let us take care of what you no longer need.
+      </p>
+
+    </section>
+
+
+    <!-- PATIENT PORTAL -->
+    <section class="patient" id="patient">
+
+      <p class="eyebrow">
+        YOUR FUTURE BEGINS HERE
+      </p>
+
+      <h2>
+        We'll take care of the rest.
+      </h2>
+
+      <p>
+        Your consultation is waiting.
+      </p>
+
+      <a href="patient.html" class="patient-button">
+        BEGIN YOUR APPLICATION
+      </a>
+
+      <span class="secret-message">
+        YOU DON'T REMEMBER SIGNING UP?
+      </span>
+
+    </section>
+
+
+<!-- HOMEPAGE PATIENT QUESTIONS -->
+<section class="home-faq" id="questions">
+
+  <div class="home-faq-heading">
+
+    <p class="eyebrow">
+      THE MEMORY DEPARTMENT / PATIENT INQUIRIES
+    </p>
+
+    <span class="home-faq-symbol" aria-hidden="true">✳</span>
+
+    <h2>
+      A little clarity,<br>
+      <em>before everything changes.</em>
+    </h2>
+
+    <p class="home-faq-intro">
+      We understand that entrusting someone with your
+      memories is a deeply personal decision. We've
+      answered a few questions to help you feel at ease.
+    </p>
+
+  </div>
+
+  <div class="home-faq-list">
+
+    <!-- QUESTION 01 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">01</span>
+        <span class="home-faq-question">
+          How do I know which treatment is right for me?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Our specialists will help you determine whether
+          Memory Restoration or Memory Remediation best
+          suits your individual needs. You do not need
+          to arrive with all the answers. That is what
+          we are here for.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 02 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">02</span>
+        <span class="home-faq-question">
+          What happens during my three-day stay?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Every patient receives a personalized residential
+          experience designed around rest, recovery, and
+          emotional renewal. During this time, external
+          communication may be limited to preserve the
+          integrity of your treatment. Your comfort
+          remains our highest priority.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 03 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">03</span>
+        <span class="home-faq-question">
+          Will I still feel like myself afterward?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Most patients report a renewed sense of clarity
+          and emotional freedom. While certain aspects
+          of your personal history may feel unfamiliar
+          following treatment, these adjustments are
+          considered a natural part of the process.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 04 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">04</span>
+        <span class="home-faq-question">
+          Can I change my mind after treatment begins?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          We respect every patient's right to make
+          informed decisions. However, once the memory
+          integration process has commenced, interruption
+          may not be possible. Your specialist will review
+          all applicable conditions before treatment.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 05 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">05</span>
+        <span class="home-faq-question">
+          Will my family notice anything different about me?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Changes in behavior, emotional attachment,
+          or personal recollection may be observed by
+          those closest to you. We recommend allowing
+          time for these relationships to adjust to
+          your renewed perspective.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 06 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">06</span>
+        <span class="home-faq-question">
+          What happens to the memories I no longer want?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Memories selected for remediation are carefully
+          separated from your conscious recollection
+          and transferred to our secure archival system.
+          All materials remain under the protection of
+          The Memory Department in accordance with
+          our internal retention policies.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 07 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">07</span>
+        <span class="home-faq-question">
+          Why does The Memory Department retain removed memories?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Our archival procedures exist to maintain
+          treatment accuracy, ensure continuity of care,
+          and protect against unintended restoration.
+          Patients are not required to review archived
+          material following treatment.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 08 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">08</span>
+        <span class="home-faq-question">
+          What if I remember something I was supposed to forget?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Occasional recollection is not necessarily an
+          indication of treatment failure. Should an
+          unfamiliar memory return, we ask that you refrain
+          from discussing or documenting it until you have
+          contacted your assigned specialist.
+        </p>
+      </div>
+    </details>
+
+    <!-- QUESTION 09 -->
+    <details class="home-faq-item">
+      <summary>
+        <span class="home-faq-number">09</span>
+        <span class="home-faq-question">
+          Why does your clinic already have a file on me?
+        </span>
+        <span class="home-faq-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="home-faq-answer">
+        <p>
+          Certain preliminary records may be generated
+          before a formal application is submitted.
+          This allows us to provide a seamless patient
+          experience. If you believe a record has been
+          created in error, please rest assured that
+          no further action is required.
+        </p>
+      </div>
+    </details>
+
+  </div>
+
+  <div class="home-faq-ending">
+
+    <p>YOUR PAST IS IN GOOD HANDS.</p>
+
+    <span class="home-faq-secret" tabindex="0">
+      <span class="home-faq-secret-original">
+        Some questions are best left unanswered.
+      </span>
+      <span class="home-faq-secret-reveal">
+        Some questions have already been answered on your behalf.
+      </span>
+    </span>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+
+<!-- FICTIONAL PARTNER ADVERTISEMENTS -->
+<aside class="memory-ad" id="memory-ad" hidden
+       aria-label="The Memory Department partner advertisement">
+
+  <button class="memory-ad-close" id="memory-ad-close"
+          type="button" aria-label="Close advertisement">
+    &times;
+  </button>
+
+  <p class="memory-ad-label">
+    A THOUGHTFUL RECOMMENDATION
+  </p>
+
+  <div class="memory-ad-image">
+    <img id="memory-ad-photo"
+         src="images/memory-perfume2.jpg"
+         alt="Remember Me perfume">
+  </div>
+
+  <p class="memory-ad-category" id="memory-ad-category">
+    AN EXCLUSIVE COLLECTION
+  </p>
+
+  <h2 class="memory-ad-title" id="memory-ad-title">
+    REMEMBER ME™
+  </h2>
+
+  <p class="memory-ad-subtitle" id="memory-ad-subtitle">
+    The Fragrance of Yesterday
+  </p>
+
+  <p class="memory-ad-description" id="memory-ad-description">
+    Some things are too beautiful to forget.
+  </p>
+
+  <p class="memory-ad-fineprint" id="memory-ad-fineprint">
+   
+  </p>
+  <a href="services.html#remember-me" class="memory-ad-cta">
+  DISCOVER THE COLLECTION
+</a>
+
+ <div class="memory-ad-pagination">
+  <button
+    type="button"
+    class="memory-ad-dot active"
+    aria-label="View Remember Me advertisement"
+    aria-pressed="true">
+  </button>
+
+  <button
+    type="button"
+    class="memory-ad-dot"
+    aria-label="View Reorientation Club advertisement"
+    aria-pressed="false">
+  </button>
+</div>
+</aside>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 THE MEMORY DEPARTMENT.
+      ALL MEMORIES RESERVED.
+    </p>
+
+    <p class="footer-warning">
+      YOUR MEMORIES ARE SAFE WITH US.
+    </p>
+
+  </footer>
+
+</body>
+</html>

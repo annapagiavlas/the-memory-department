@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Patient Enrollment | The Memory Department</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="services.html">SERVICES</a>
+      <a href="patient.html" aria-current="page">BECOME A PATIENT</a>
+      <a href="aftercare.html">LIFE AFTER TREATMENT</a>
+    </nav>
+
+    <a class="site-name" href="index.html">
+      THE MEMORY DEPARTMENT
+    </a>
+
+  </header>
+
+
+  <main class="patient-page">
+
+
+    <!-- PAGE INTRODUCTION -->
+
+    <section class="enrollment-hero">
+
+      <video
+        class="patient-background-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="images/websitecover4.mp4" type="video/mp4">
+      </video>
+
+      <p class="eyebrow">
+        THE MEMORY DEPARTMENT / PATIENT SERVICES
+      </p>
+
+      <h1>
+        Your care begins
+        <em>here.</em>
+      </h1>
+
+      <p>
+        The decision to revisit or relinquish a personal
+        memory deserves careful consideration. Whether
+        you are seeking treatment or simply wish to
+        understand your options, our patient services
+        team is here to assist you.
+      </p>
+
+      <span class="enrollment-star" aria-hidden="true">
+        ✳
+      </span>
+
+    </section>
+
+
+    <!-- SERVICE SELECTION -->
+
+    <section class="enrollment-section" id="selection">
+
+      <p class="eyebrow">
+        PATIENT SERVICES / 001—003
+      </p>
+
+      <h2>How may we assist you?</h2>
+
+      <div class="treatment-grid">
+
+
+        <!-- MEMORY RESTORATION -->
+
+        <button class="treatment-card"
+                type="button"
+                data-treatment="restoration">
+
+          <span class="treatment-label">
+            TREATMENT 001
+          </span>
+
+          <img
+            src="images/memory-restoration.jpg"
+            alt="Memory restoration"
+          >
+
+          <span class="treatment-title">
+            Memory Restoration
+          </span>
+
+          <span class="treatment-description">
+            For individuals seeking to recover personal
+            recollections that have become incomplete,
+            distant, or inaccessible with time.
+          </span>
+
+          <span class="treatment-action">
+            REQUEST RESTORATION ↗
+          </span>
+
+        </button>
+
+
+        <!-- MEMORY REMEDIATION -->
+
+        <button class="treatment-card"
+                type="button"
+                data-treatment="deletion">
+
+          <span class="treatment-label">
+            TREATMENT 002
+          </span>
+
+          <img
+            src="images/memory-deletion.jpg"
+            alt="Memory remediation"
+          >
+
+          <span class="treatment-title">
+            Memory Remediation
+          </span>
+
+          <span class="treatment-description">
+            For individuals seeking the permanent removal
+            of selected recollections that continue to
+            affect their daily lives.
+          </span>
+
+          <span class="treatment-action">
+            REQUEST REMEDIATION ↗
+          </span>
+
+        </button>
+
+
+        <!-- PRIVATE CONSULTATION -->
+
+        <button class="treatment-card"
+                type="button"
+                data-treatment="consultation">
+
+          <span class="treatment-label">
+            PATIENT SERVICES 003
+          </span>
+
+          <img
+            src="images/memory-consultation3.jpg"
+            alt="Private consultation accommodations"
+          >
+
+          <span class="treatment-title">
+            Private Consultation
+          </span>
+
+          <span class="treatment-description">
+            An individual appointment with a specialist
+            to discuss your circumstances, treatment
+            eligibility, and available options.
+          </span>
+
+          <span class="treatment-action">
+            REQUEST CONSULTATION ↗
+          </span>
+
+        </button>
+
+      </div>
+
+      <p class="enrollment-note">
+        ALL APPLICATIONS ARE REVIEWED INDIVIDUALLY.
+        CONSULTATIONS DO NOT REQUIRE A COMMITMENT TO TREATMENT.
+      </p>
+
+    </section>
+
+
+    <!-- RESTORATION FORM -->
+
+    <section class="application-section"
+             id="restoration-form"
+             hidden>
+
+      <button class="form-back" type="button">
+        ← RETURN TO PATIENT SERVICES
+      </button>
+
+      <div class="application-paper">
+
+        <div class="application-heading">
+
+          <p class="eyebrow">
+            FORM MR-001 / PRELIMINARY PATIENT ASSESSMENT
+          </p>
+
+          <h2>Memory Restoration</h2>
+
+          <p>
+            The following assessment allows our specialists
+            to establish the nature of the recollection
+            you wish to recover. We understand that you
+            may have very little information about the
+            experience itself. Please complete this
+            assessment to the best of your ability.
+          </p>
+
+        </div>
+
+        <form id="restoration-application">
+
+
+          <!-- PATIENT NAME -->
+
+          <div class="form-group">
+
+            <label for="restore-name">
+              01 / PATIENT NAME
+            </label>
+
+            <input
+              type="text"
+              id="restore-name"
+              name="patientName"
+              placeholder="Enter your full name"
+              maxlength="80"
+              required
+            >
+
+          </div>
+
+
+          <!-- DATE OF RECOLLECTION -->
+
+          <div class="form-group">
+
+            <label for="restore-date">
+              02 / APPROXIMATE DATE OR PERIOD OF RECOLLECTION
+            </label>
+
+            <input
+              type="text"
+              id="restore-date"
+              name="memoryDate"
+              placeholder="An estimated date, year, or period of your life"
+              maxlength="100"
+              required
+            >
+
+          </div>
+
+
+          <!-- PRIMARY ASSOCIATION -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              03 / PRIMARY ASSOCIATION OF THE RECOLLECTION
+            </legend>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="memoryType"
+                     value="A person"
+                     required>
+              A person
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="memoryType"
+                     value="A place">
+              A place
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="memoryType"
+                     value="An event">
+              An event or personal experience
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="memoryType"
+                     value="Unknown">
+              The association is currently unknown
+            </label>
+
+          </fieldset>
+
+
+          <!-- AVAILABLE RECOLLECTION -->
+
+          <div class="form-group">
+
+            <label for="restore-description">
+              04 / AVAILABLE RECOLLECTION
+            </label>
+
+            <textarea
+              id="restore-description"
+              name="description"
+              rows="5"
+              maxlength="1200"
+              placeholder="Using important details, describe any remaining impressions, surroundings, sounds, or emotional associations. Even incomplete details may be useful."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- REASON FOR RESTORATION -->
+
+          <div class="form-group">
+
+            <label for="restore-reason">
+              05 / REASON FOR SEEKING RESTORATION
+            </label>
+
+            <textarea
+              id="restore-reason"
+              name="reason"
+              rows="4"
+              maxlength="1200"
+              placeholder="What personal significance does this recollection hold for you?"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- MEMORY OWNERSHIP -->
+
+          <div class="form-group">
+
+            <label for="restore-certainty">
+              06 / TO WHAT EXTENT ARE YOU CERTAIN THAT
+              THIS RECOLLECTION ORIGINATES FROM YOUR
+              OWN LIVED EXPERIENCE?
+            </label>
+
+            <input
+              type="range"
+              id="restore-certainty"
+              name="certainty"
+              min="0"
+              max="100"
+              value="50"
+              step="10"
+            >
+
+            <div class="range-labels">
+              <span>UNCERTAIN</span>
+              <span id="certainty-value">50%</span>
+              <span>COMPLETELY CERTAIN</span>
+            </div>
+
+            <p class="form-whisper"
+               id="restoration-whisper"
+               aria-live="polite"></p>
+
+          </div>
+
+
+          <!-- PATIENT ACKNOWLEDGMENT -->
+
+          <div class="consent-area">
+
+            <p class="eyebrow">
+              PATIENT ACKNOWLEDGMENT
+            </p>
+
+            <label class="checkbox-option">
+
+              <input type="checkbox"
+                     name="consent"
+                     required>
+
+              <span>
+                I understand that reconstructed recollections
+                may contain discrepancies from the original
+                experience and that emotional familiarity
+                does not constitute verification of
+                historical accuracy.
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <!-- SUBMIT -->
+
+          <button class="application-submit" type="submit">
+            SUBMIT RESTORATION REQUEST
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- REMEDIATION FORM -->
+
+    <section class="application-section"
+             id="deletion-form"
+             hidden>
+
+      <button class="form-back" type="button">
+        ← RETURN TO PATIENT SERVICES
+      </button>
+
+      <div class="application-paper">
+
+        <div class="application-heading">
+
+          <p class="eyebrow">
+            FORM MD-002 / PRELIMINARY PATIENT ASSESSMENT
+          </p>
+
+          <h2>Memory Remediation</h2>
+
+          <p>
+            Remediation requests are assessed individually
+            to establish the appropriate scope of treatment.
+            The information provided below will assist our
+            specialists in identifying the recollections
+            relevant to your request. We recognize the
+            personal nature of this information and ask
+            that you disclose only what you are comfortable
+            sharing.
+          </p>
+
+        </div>
+
+        <form id="deletion-application">
+
+
+          <!-- PATIENT NAME -->
+
+          <div class="form-group">
+
+            <label for="delete-name">
+              01 / PATIENT NAME
+            </label>
+
+            <input
+              type="text"
+              id="delete-name"
+              name="patientName"
+              placeholder="Enter your full name"
+              maxlength="80"
+              required
+            >
+
+          </div>
+
+
+          <!-- SUBJECT OF REMEDIATION -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              02 / PRIMARY SUBJECT OF REMEDIATION
+            </legend>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="A moment"
+                     required>
+              A specific event or experience
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="A person">
+              A person or personal relationship
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="An animal">
+              An animal or companion
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="An object">
+              An object or personal belonging
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="A period">
+              An extended period of my personal history
+            </label>
+
+            <label class="radio-option">
+              <input type="radio"
+                     name="deletionType"
+                     value="Unknown">
+              I am unable to identify the source
+            </label>
+
+          </fieldset>
+
+
+          <!-- DESCRIPTION -->
+
+          <div class="form-group">
+
+            <label for="delete-description">
+              03 / DESCRIPTION OF SELECTED RECOLLECTION
+            </label>
+
+            <textarea
+              id="delete-description"
+              name="description"
+              rows="5"
+              maxlength="1200"
+              placeholder="Using important details, provide sufficient information to identify the intended subject of treatment."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- PRESENT-DAY IMPACT -->
+
+          <div class="form-group">
+
+            <label for="delete-impact">
+              04 / TO WHAT EXTENT DOES THIS RECOLLECTION
+              INFLUENCE YOUR DAILY LIFE?
+            </label>
+
+            <select id="delete-impact"
+                    name="impact"
+                    required>
+
+              <option value="" disabled selected>
+                Select the most appropriate response
+              </option>
+
+              <option value="Minimal">
+                Minimal — occasional emotional discomfort
+              </option>
+
+              <option value="Moderate">
+                Moderate — recurring interference with daily life
+              </option>
+
+              <option value="Significant">
+                Significant — persistent emotional or personal difficulties
+              </option>
+
+              <option value="Unknown">
+                I am unable to determine its influence
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- SCOPE OF REMEDIATION -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              05 / PREFERRED SCOPE OF REMEDIATION
+            </legend>
+
+            <label class="radio-option">
+
+              <input type="radio"
+                     name="associated"
+                     value="All"
+                     required>
+
+              I would consider the removal of all
+              closely associated recollections.
+
+            </label>
+
+            <label class="radio-option">
+
+              <input type="radio"
+                     name="associated"
+                     value="Selected only">
+
+              I wish to limit treatment to the
+              selected recollection.
+
+            </label>
+
+            <label class="radio-option">
+
+              <input type="radio"
+                     name="associated"
+                     value="Review first">
+
+              I would prefer to review associated
+              recollections before making a decision.
+
+            </label>
+
+            <p class="form-whisper"
+               id="deletion-whisper"
+               aria-live="polite"></p>
+
+          </fieldset>
+
+
+          <!-- PATIENT ACKNOWLEDGMENT -->
+
+          <div class="consent-area">
+
+            <p class="eyebrow">
+              PATIENT ACKNOWLEDGMENT
+            </p>
+
+            <label class="checkbox-option">
+
+              <input type="checkbox"
+                     name="consent"
+                     required>
+
+              <span>
+                I acknowledge that remediation is intended
+                to be permanent and that the removal of
+                selected recollections may affect associated
+                memories, emotional responses, and
+                interpersonal relationships. I understand
+                that the full extent of these changes
+                cannot be established in advance.
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <!-- SUBMIT -->
+
+          <button class="application-submit" type="submit">
+            SUBMIT REMEDIATION REQUEST
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRIVATE CONSULTATION FORM -->
+
+    <section class="application-section"
+             id="consultation-form"
+             hidden>
+
+      <button class="form-back" type="button">
+        ← RETURN TO PATIENT SERVICES
+      </button>
+
+      <div class="application-paper">
+
+        <div class="application-heading">
+
+          <p class="eyebrow">
+            FORM PC-003 / INITIAL CONSULTATION
+          </p>
+
+          <h2>Private Consultation</h2>
+
+          <p>
+            You do not need to have made a decision about
+            treatment before meeting with us. An initial
+            consultation provides an opportunity to speak
+            privately with a specialist, discuss your
+            circumstances, and better understand the
+            procedures available to you. There is no
+            obligation to proceed.
+          </p>
+
+        </div>
+
+        <form id="consultation-application">
+
+
+          <!-- PATIENT NAME -->
+
+          <div class="form-group">
+
+            <label for="consultation-name">
+              01 / PROSPECTIVE PATIENT NAME
+            </label>
+
+            <input
+              type="text"
+              id="consultation-name"
+              name="patientName"
+              placeholder="Enter your full name"
+              maxlength="80"
+              required
+            >
+
+          </div>
+
+
+          <!-- AGE -->
+
+          <div class="form-group">
+
+            <label for="consultation-age">
+              02 / AGE RANGE
+            </label>
+
+            <select id="consultation-age"
+                    name="age"
+                    required>
+
+              <option value="" disabled selected>
+                Select your age range
+              </option>
+
+              <option value="18-24">18–24</option>
+              <option value="25-34">25–34</option>
+              <option value="35-44">35–44</option>
+              <option value="45-54">45–54</option>
+              <option value="55-64">55–64</option>
+              <option value="65+">65 or older</option>
+
+            </select>
+
+          </div>
+
+
+          <!-- TREATMENT INTEREST -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              03 / AREA OF INTEREST
+            </legend>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="consultationInterest"
+                value="Memory Restoration"
+                required
+              >
+
+              Memory Restoration
+
+            </label>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="consultationInterest"
+                value="Memory Remediation"
+              >
+
+              Memory Remediation
+
+            </label>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="consultationInterest"
+                value="Both treatments"
+              >
+
+              I would like to discuss both procedures.
+
+            </label>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="consultationInterest"
+                value="Undecided"
+              >
+
+              I am seeking general information
+              before making a decision.
+
+            </label>
+
+          </fieldset>
+
+
+          <!-- REASON FOR CONSULTATION -->
+
+          <div class="form-group">
+
+            <label for="consultation-reason">
+              04 / REASON FOR CONSULTATION
+            </label>
+
+            <textarea
+              id="consultation-reason"
+              name="reason"
+              rows="5"
+              maxlength="1200"
+              placeholder="Using important information, share any circumstances you feel may be relevant to your appointment. This section is optional."
+            ></textarea>
+
+          </div>
+
+
+          <!-- PREVIOUS TREATMENT -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              05 / TO THE BEST OF YOUR KNOWLEDGE,
+              HAVE YOU PREVIOUSLY RECEIVED TREATMENT
+              AT THE MEMORY DEPARTMENT?
+            </legend>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="previousTreatment"
+                value="Yes"
+                required
+              >
+
+              Yes, I have previously received treatment.
+
+            </label>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="previousTreatment"
+                value="No"
+              >
+
+              No, this is my first appointment.
+
+            </label>
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="previousTreatment"
+                value="Uncertain"
+              >
+
+              I am unable to confirm my treatment history.
+
+            </label>
+
+          </fieldset>
+
+
+          <!-- QUESTIONS -->
+
+          <div class="form-group">
+
+            <label for="consultation-questions">
+              06 / QUESTIONS AND ADDITIONAL CONSIDERATIONS
+            </label>
+
+            <textarea
+              id="consultation-questions"
+              name="questions"
+              rows="4"
+              maxlength="1200"
+              placeholder="Are there any particular concerns you would like your specialist to address?"
+            ></textarea>
+
+          </div>
+
+
+          <!-- APPOINTMENT PREFERENCE -->
+
+          <div class="form-group">
+
+            <label for="consultation-time">
+              07 / APPOINTMENT PREFERENCE
+            </label>
+
+            <select
+              id="consultation-time"
+              name="preferredTime"
+              required
+            >
+
+              <option value="" disabled selected>
+                Select your preferred appointment window
+              </option>
+
+              <option value="Morning">
+                Morning — 9:00 AM to 12:00 PM
+              </option>
+
+              <option value="Afternoon">
+                Afternoon — 12:00 PM to 5:00 PM
+              </option>
+
+              <option value="Flexible">
+                No preference
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- PATIENT ACKNOWLEDGMENT -->
+
+          <div class="consent-area">
+
+            <p class="eyebrow">
+              PATIENT ACKNOWLEDGMENT
+            </p>
+
+            <label class="checkbox-option">
+
+              <input
+                type="checkbox"
+                name="consent"
+                required
+              >
+
+              <span>
+                I understand that requesting a consultation
+                does not constitute authorization for
+                treatment. Any subsequent procedure will
+                require a separate assessment and
+                acknowledgment of consent.
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <!-- SUBMIT -->
+
+          <button class="application-submit" type="submit">
+            SUBMIT CONSULTATION REQUEST
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONFIRMATION -->
+
+    <section class="confirmation-section"
+             id="confirmation"
+             hidden>
+
+      <div class="confirmation-paper">
+
+        <p class="eyebrow">
+          THE MEMORY DEPARTMENT / PATIENT SERVICES
+        </p>
+
+        <span class="confirmation-symbol" aria-hidden="true">
+          ✳
+        </span>
+
+        <h2 id="confirmation-title">
+          Your request has been received.
+        </h2>
+
+        <p id="confirmation-message"></p>
+
+        <div class="confirmation-details">
+
+          <p>
+            PATIENT:
+            <span id="confirmation-name"></span>
+          </p>
+
+          <p>
+            REFERENCE:
+            <span id="confirmation-reference"></span>
+          </p>
+
+          <p>
+            STATUS: PENDING SPECIALIST REVIEW
+          </p>
+
+        </div>
+
+        <p class="confirmation-secret"
+           id="confirmation-secret"></p>
+
+        <button class="application-submit"
+                id="start-over"
+                type="button">
+
+          RETURN TO PATIENT PORTAL
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- FICTIONAL PROJECT DISCLAIMER -->
+
+    <p class="fiction-disclaimer">
+      THE MEMORY DEPARTMENT IS AN ART PROJECT.
+      NO MEDICAL SERVICES ARE PROVIDED.
+      NO FORM RESPONSES ARE TRANSMITTED TO A SERVER.
+      USE FICTIONAL INFORMATION. OR NOT.
+    </p>
+
+
+    <!-- UNAUTHORIZED PATIENT WARNING -->
+
+    <div
+      class="system-warning-overlay"
+      id="system-warning-overlay"
+      hidden
+    >
+
+      <div
+        class="system-warning"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="system-warning-title"
+        aria-describedby="system-warning-description"
+        tabindex="-1"
+      >
+
+        <div class="system-warning-header">
+
+          <span>UNKNOWN PROCESS / PATIENT PORTAL</span>
+          <span>ERROR 004</span>
+
+        </div>
+
+        <div class="system-warning-body">
+
+          <p class="system-warning-status">
+            ⚠ UNAUTHORIZED SYSTEM MESSAGE
+          </p>
+
+          <h2 id="system-warning-title">
+            PLEASE DO NOT<br>
+            COMPLETE THIS FORM.
+          </h2>
+
+          <p id="system-warning-description">
+            This message was not issued by
+            The Memory Department.
+          </p>
+
+          <p>
+            Your consent may not be sufficient.
+            Your memories may not remain your own.
+          </p>
+
+          <p class="system-warning-red">
+            CONNECTION BEING MONITORED
+          </p>
+
+          <div class="system-warning-actions">
+
+            <a href="index.html" class="warning-leave">
+              LEAVE THIS PAGE
+            </a>
+
+            <button
+              type="button"
+              class="warning-dismiss"
+              id="warning-dismiss"
+            >
+              DISMISS WARNING
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="system-warning-footer">
+          SOURCE UNKNOWN — TRANSMISSION INTERRUPTED
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PATIENT FORM NOTIFICATION -->
+
+    <div
+      id="patient-notification"
+      class="patient-notification"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
+
+      <span id="notification-icon">✳</span>
+
+      <div class="notification-content">
+
+        <strong id="notification-title"></strong>
+        <p id="notification-message"></p>
+
+      </div>
+
+      <button
+        type="button"
+        id="notification-close"
+        aria-label="Close notification"
+      >
+        ×
+      </button>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 THE MEMORY DEPARTMENT.
+      ALL MEMORIES RESERVED.
+    </p>
+
+    <p class="footer-warning">
+      YOUR MEMORIES ARE SAFE WITH US.
+    </p>
+
+  </footer>
+
+</body>
+</html>
